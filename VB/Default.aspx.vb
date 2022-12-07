@@ -37,7 +37,7 @@ Partial Public Class _Default
 	Protected Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
 		WriteToResponse(Html)
 	End Sub
-	Protected Sub ASPxDataView1_CustomCallback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxClasses.CallbackEventArgsBase)
+	Protected Sub ASPxDataView1_CustomCallback(ByVal sender As Object, ByVal e As DevExpress.Web.CallbackEventArgsBase)
 		Html += CStr(HtmlHiddenField.Get("Value"))
 		Dim pageIndex As Integer = Convert.ToInt32(HtmlHiddenField.Get("PageIndex"))
 		If pageIndex <> DataViewExport.PageCount - 1 Then

@@ -34,7 +34,7 @@ public partial class _Default : System.Web.UI.Page {
     protected void Button1_Click(object sender, EventArgs e) {
         WriteToResponse(Html);
     }
-    protected void ASPxDataView1_CustomCallback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e) {
+    protected void ASPxDataView1_CustomCallback(object sender, DevExpress.Web.CallbackEventArgsBase e) {
         Html += (string)HtmlHiddenField.Get("Value");
         int pageIndex = Convert.ToInt32(HtmlHiddenField.Get("PageIndex"));
         if (pageIndex != DataViewExport.PageCount - 1) {
